@@ -1,0 +1,61 @@
+# .gitlab-ci.yml para Bash & Blade (Rust + Testes)
+image: rust:latest
+
+stages:
+  - setup
+  - build
+  - test
+  - lint
+
+variables:
+  CARGO_HOME: $CI_PROJECT_DIR/.cargo
+  RUSTUP_HOME: $CI_PROJECT_DIR/.rustup
+
+cache:
+  key: ${CI_JOB_NAME}
+  paths:
+    - .cargo/bin
+    - .cargo/registry
+    - target/
+
+before_script:
+  - rustup component add rustfmt clippy
+  - cargo --version
+  - rustc --version
+
+setup:
+  stage: setup
+  script:
+    - rustup default stable
+    - cargo fetch
+  cache:
+    policy: pull
+
+build:
+  stage: build
+  script:
+    - cargo build --verbose --release
+  artifacts:
+    paths:
+      - target/release/bash-and-blade  # Opcional: remove se não precisar do binário
+
+unit_tests:
+  stage: test
+  script:
+    - cargo test --verbose --lib  # Testa apenas módulos da biblioteca
+
+integration_tests:
+  stage: test
+  script:
+    - cargo test --verbose --tests  # Testes em tests/
+
+doc_tests:
+  stage: test
+  script:
+    - cargo test --verbose --doc  # Testa exemplos da documentação
+
+lint:
+  stage: lint
+  script:
+    - cargo fmt -- --check  # Verifica formatação
+    - cargo clippy -- -D warnings  # Verifica clippy
