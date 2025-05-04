@@ -1,8 +1,8 @@
 # Bash & Blade - Seu RPG pelo terminal!
 
-> @author:  CaioSimioni
-> @date:    Maio 2025
-> @version: v0.1.0-dev
+> @author:  CaioSimioni <br>
+> @date:    Maio 2025   <br>
+> @version: v0.1.0-dev  <br>
 
 ## Descrição
 
@@ -15,4 +15,3 @@ Projeto busca desenvolver um jogo RPG em Rust para ser jogado pelo terminal.
 - [ ] Implementar o desenvolvimento TDD;
 - [ ] Fazer a documentação explicida e distribuição; e
 - [ ] Se tornar um mestre em Rust, enquando crio aventuras;
-
