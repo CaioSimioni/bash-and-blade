@@ -1,17 +1,58 @@
-# Bash & Blade - Seu RPG pelo terminal!
+# **Bash & Blade** ⚔️⌨️  
+*Um RPG de terminal escrito em Rust*  
 
-> @author:  CaioSimioni <br>
-> @date:    Maio 2025   <br>
-> @version: v0.1.0-dev  <br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+[![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange?logo=rust)](https://www.rust-lang.org/)  
+[![Build Status](https://img.shields.io/github/actions/workflow/status/seuuser/bash-and-blade/rust.yml?branch=main)](https://github.com/seuuser/bash-and-blade/actions)  
 
-## Descrição
+> **Desenvolvido por**: Caio Simioni  
+> **Versão**: `v0.1.0-dev` *(Maio 2025)*  
 
-Projeto busca desenvolver um jogo RPG em Rust para ser jogado pelo terminal.
+---
 
-## Objetivos
+## 🎮 **Descrição**  
+**Bash & Blade** é um RPG de texto jogável diretamente no terminal, onde você explora masmorras, resolve enigmas e enfrenta criaturas usando apenas o terminal. Feito em Rust, o jogo combina:  
+- **Narrativa imersiva** (estilo *livro-jogo*).  
+- **Combate baseado em turnos**.  
+- **Desafios lógicos e interação via CLI**.  
 
-- [ ] Escrever roteiro;
-- [ ] Aprender a arquitetura necessária;
-- [ ] Implementar o desenvolvimento TDD;
-- [ ] Fazer a documentação explicida e distribuição; e
-- [ ] Se tornar um mestre em Rust, enquando crio aventuras;
+---
+
+## 🚀 **Objetivos**  
+- [ ] **Aprender Rust na prática** (ownership, enums, pattern matching).  
+- [ ] **Arquitetura limpa** (ECS, separação lógica/narrativa).  
+- [ ] **TDD** (testes unitários/integração com `cargo test`).  
+- [ ] **Documentação autoexplicativa** (via `rustdoc` + exemplos).  
+- [ ] **Distribuição cross-platform** (binários para Linux/macOS/Windows).  
+
+---
+
+## 📂 **Estrutura do Projeto** (WIP)  
+```bash
+.
+├── src/                  # Código-fonte Rust
+│   ├── main.rs           # Ponto de entrada
+│   ├── game/             # Lógica do jogo (módulos separados)
+│   └── tests/            # Testes automatizados
+├── docs/                 # Documentação técnica
+├── assets/               # Arquivos de texto (história, diálogos)
+└── Cargo.toml            # Dependências e metadados
+```
+
+---
+
+## 🔧 **Como Contribuir**  
+1. **Clone o repositório**:  
+   ```bash
+   git clone https://github.com/seuuser/bash-and-blade.git
+   ```
+2. **Compile e execute**:  
+   ```bash
+   cargo run --release
+   ```
+3. **Siga as diretrizes** em [CONTRIBUTING.md](CONTRIBUTING.md).  
+
+---
+
+## 📜 **Licença**  
+Distribuído sob a licença **MIT**. Veja [LICENSE](LICENSE) para detalhes.  
