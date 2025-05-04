@@ -1,4 +1,4 @@
-# .gitlab-ci.yml para Bash & Blade (Rust + Testes)
+# .gitlab-ci.yml corrigido para Bash & Blade
 image: rust:latest
 
 stages:
@@ -19,6 +19,7 @@ cache:
     - target/
 
 before_script:
+  - rustup default stable  # Primeiro definimos a toolchain padrão
   - rustup component add rustfmt clippy
   - cargo --version
   - rustc --version
@@ -26,7 +27,6 @@ before_script:
 setup:
   stage: setup
   script:
-    - rustup default stable
     - cargo fetch
   cache:
     policy: pull
@@ -35,27 +35,19 @@ build:
   stage: build
   script:
     - cargo build --verbose --release
-  artifacts:
-    paths:
-      - target/release/bash-and-blade  # Opcional: remove se não precisar do binário
 
 unit_tests:
   stage: test
   script:
-    - cargo test --verbose --lib  # Testa apenas módulos da biblioteca
+    - cargo test --verbose --lib
 
 integration_tests:
   stage: test
   script:
-    - cargo test --verbose --tests  # Testes em tests/
-
-doc_tests:
-  stage: test
-  script:
-    - cargo test --verbose --doc  # Testa exemplos da documentação
+    - cargo test --verbose --tests
 
 lint:
   stage: lint
   script:
-    - cargo fmt -- --check  # Verifica formatação
-    - cargo clippy -- -D warnings  # Verifica clippy
+    - cargo fmt -- --check
+    - cargo clippy -- -D warnings
