@@ -21,5 +21,8 @@ fn test_integration_multiply() {
 #[test]
 fn test_integration_divide() {
     assert_eq!(math::divide(10, 5), Ok(2));
-    assert_eq!(math::divide(10, 0), Err("Cannot divide by zero".to_string()));
+    assert_eq!(
+        math::divide(10, 0),
+        Err("Cannot divide by zero".to_string())
+    );
 }
