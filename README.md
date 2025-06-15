@@ -4,10 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
 [![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange?logo=rust)](https://www.rust-lang.org/)  
-[![Build Status](https://img.shields.io/github/actions/workflow/status/seuuser/bash-and-blade/rust.yml?branch=main)](https://github.com/seuuser/bash-and-blade/actions)  
-
-> **Desenvolvido por**: Caio Simioni  
-> **Versão**: `v0.1.0-dev` *(Maio 2025)*  
+[![Build Status](https://img.shields.io/github/actions/workflow/status/CaioSimioni/bash-and-blade/ci.yml?branch=master)](https://github.com/CaioSimioni/bash-and-blade/actions)
 
 ---
 
