@@ -96,12 +96,15 @@ cargo doc --open
 
 ```bash
 .
+├── .github/workflows     # Github Actions (CI)
+├── assets/               # Arquivos de texto (história, diálogos)
+├── logs/                 # Registros do sistema
 ├── src/                  # Código-fonte Rust
 │   ├── main.rs           # Ponto de entrada
 │   ├── game/             # Lógica do jogo (módulos separados)
-│   └── tests/            # Testes automatizados
-├── docs/                 # Documentação técnica
-├── assets/               # Arquivos de texto (história, diálogos)
+│   └── utils/            # Funções utilitárias para o jogo
+├── target/               # Compilado do cargo
+├── tests/                # Testes automatizados
 └── Cargo.toml            # Dependências e metadados
 ```
 
@@ -119,24 +122,6 @@ cargo build
 
 ---
 
-## 🔧 **Como Contribuir**  
-
-1. **Clone o repositório**:  
-
-   ```bash
-   git clone https://github.com/CaioSimioni/bash-and-blade.git
-   ```
-
-2. **Compile e execute**:  
-
-   ```bash
-   cargo run --release
-   ```
-
-3. **Siga as diretrizes** em [CONTRIBUTING.md](CONTRIBUTING.md).  
-
----
-
 ## 🧑‍💻 Como contribuir
 
 Antes de enviar suas alterações para o repositório, execute o script de pre-commit para garantir a qualidade do código:
@@ -149,11 +134,12 @@ Esse script irá:
 
 - Rodar todos os testes (`cargo test`)
 - Compilar o projeto (`cargo build --release`)
+- Verificando formatação (`cargo fmt -- --check`)
 - Rodar os lints (`cargo clippy -- -D warnings`)
 
 Se tudo passar, você pode commitar e enviar seu PR normalmente!
 
-Para mais detalhes, veja o arquivo [CONTRIBUTING](CONTRIBUTING).
+Para mais detalhes, veja o arquivo [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
