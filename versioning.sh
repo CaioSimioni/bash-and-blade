@@ -23,7 +23,7 @@ confirm_version() {
 }
 
 update_headers() {
-    HEADER="/*\n* Bash and Blades\n* @version: v$VERSION\n* @author: CaioSimioni\n* @License: MIT\n*/"
+    HEADER="/*\n* Bash and Blade\n* @version: v$VERSION\n* @author: CaioSimioni\n* @License: MIT\n*/"
     echo "Alterando os seguintes arquivos:"
     find ./src -type f -name "*.rs" | while read FILE; do
         if grep -q "\* @version:" "$FILE"; then
