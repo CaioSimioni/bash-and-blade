@@ -48,7 +48,7 @@ cargo --version
 ### Baixar o projeto
 
 ```bash
-git clone https://github.com/seuuser/bash-and-blade.git
+git clone https://github.com/CaioSimioni/bash-and-blade.git
 cd bash-and-blade
 ```
 
