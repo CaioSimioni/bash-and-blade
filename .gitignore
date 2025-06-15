@@ -1,7 +1,4 @@
 /target  
 Cargo.lock  
 *.log  
-
-# Added by cargo
-
-/target
+.env

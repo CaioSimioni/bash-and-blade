@@ -23,11 +23,9 @@
 
 ## 🚀 **Objetivos**  
 
-- [ ] **Aprender Rust na prática** (ownership, enums, pattern matching).  
-- [ ] **Arquitetura limpa** (ECS, separação lógica/narrativa).  
-- [ ] **TDD** (testes unitários/integração com `cargo test`).  
-- [ ] **Documentação autoexplicativa** (via `rustdoc` + exemplos).  
-- [ ] **Distribuição cross-platform** (binários para Linux/macOS/Windows).  
+- [ ] Criar um framework de telas de terminal
+- [ ] Criar as primeiras telas
+- [ ] Dar contexto ao jogo. (Mapas, Itens, Personagens, etc.)
 
 ---
 
@@ -108,6 +106,18 @@ cargo doc --open
 ├── docs/                 # Documentação técnica
 ├── assets/               # Arquivos de texto (história, diálogos)
 └── Cargo.toml            # Dependências e metadados
+```
+
+---
+
+## 📦 **Dependências**
+
+Adicione as dependências ao arquivo `Cargo.toml`:
+
+Depois, baixe e instale as dependências com:
+
+```bash
+cargo build
 ```
 
 ---
