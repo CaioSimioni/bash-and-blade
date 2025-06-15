@@ -1,6 +1,8 @@
 /*
 * Bash and Blade
-* @version: v0.0.1 DEV
 * @author: CaioSimioni
-* @License: MIT
+* @license: MIT
+* NÃO ALTERE ESTE CABEÇALHO MANUALMENTE.
 */
+
+pub mod logging;

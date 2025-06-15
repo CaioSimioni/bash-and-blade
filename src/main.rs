@@ -1,25 +1,36 @@
 /*
 * Bash and Blade
-* @version: v0.0.1 DEV
 * @author: CaioSimioni
-* @License: MIT
+* @license: MIT
+* NÃO ALTERE ESTE CABEÇALHO MANUALMENTE.
 */
+
+extern crate bash_and_blade;
+
+use bash_and_blade::utils::logging;
 
 /*
 * Main function that initializes the game.
 */
 fn main() {
-    println!("bash and blade");
+    // [ ] TODO - Inicia o logging
 
-    // [TODO] - Inicia o logger
+    if let Err(e) = logging::setup() {
+        eprintln!("Erro ao inicializar o logger: {}", e);
+        std::process::exit(1);
+    }
 
-    // [TODO] - Inicia o setup do projeto 'identificar o ambiente' e 'configs'
+    logging::info("Bash and Blade - Iniciando o jogo");
+    logging::warn("Este é um aviso de teste");
+    logging::error("Este é um erro de teste");
 
-    // [TODO] - Primeiras telas de apresentacao
+    // [ ] TODO - Inicia o setup do projeto 'identificar o ambiente' e 'configs'
 
-    // [TODO] - Identificar qual o personagem/save que sera usado
+    // [ ] TODO - Primeiras telas de apresentacao
 
-    // [TODO] - Cria o jogo e inicia o looping
+    // [ ] TODO - Identificar qual o personagem/save que sera usado
 
-    // [TODO] - Identifica o 'escape' do looping e encerra o jogo
+    // [ ] TODO - Cria o jogo e inicia o looping
+
+    // [ ] TODO - Identifica o 'escape' do looping e encerra o jogo
 }

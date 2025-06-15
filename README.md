@@ -124,7 +124,7 @@ cargo build
 1. **Clone o repositório**:  
 
    ```bash
-   git clone https://github.com/seuuser/bash-and-blade.git
+   git clone https://github.com/CaioSimioni/bash-and-blade.git
    ```
 
 2. **Compile e execute**:  
@@ -134,6 +134,26 @@ cargo build
    ```
 
 3. **Siga as diretrizes** em [CONTRIBUTING.md](CONTRIBUTING.md).  
+
+---
+
+## 🧑‍💻 Como contribuir
+
+Antes de enviar suas alterações para o repositório, execute o script de pre-commit para garantir a qualidade do código:
+
+```bash
+./pre-commit.sh
+```
+
+Esse script irá:
+
+- Rodar todos os testes (`cargo test`)
+- Compilar o projeto (`cargo build --release`)
+- Rodar os lints (`cargo clippy -- -D warnings`)
+
+Se tudo passar, você pode commitar e enviar seu PR normalmente!
+
+Para mais detalhes, veja o arquivo [CONTRIBUTING](CONTRIBUTING).
 
 ---
 
