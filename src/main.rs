@@ -19,10 +19,6 @@ fn main() {
         std::process::exit(1);
     }
 
-    logging::info("Bash and Blade - Iniciando o jogo");
-    logging::warn("Este é um aviso de teste");
-    logging::error("Este é um erro de teste");
-
     // [ ] TODO - Inicia o setup do projeto 'identificar o ambiente' e 'configs'
 
     // [ ] TODO - Primeiras telas de apresentacao
